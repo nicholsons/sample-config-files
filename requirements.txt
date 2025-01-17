@@ -1,0 +1,7 @@
+setuptools
+setuptools-scm
+pandas
+openpyxl
+plotly
+dash
+dash-bootstrap-components
