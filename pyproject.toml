@@ -5,9 +5,19 @@ version = "2025.0.1"
 
 # Most students will use setuptools, though poetry is also an option
 [build-system]
-requires = ["setuptools >= 61.0"]
+requires = ["setuptools",  "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
-# Setuptools configuration see https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html#setuptools-specific-configuration
-# You may need to add something here if your app package is NOT in a `src` folder or you have multiple packages at the root level of the project
+# Setuptools configuration see https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#src-layout
+# By default setuptools will look for `src` directory and auto discover packages
 
+# Setuptools configuration for the data files see https://setuptools.pypa.io/en/stable/userguide/datafiles.html
+
+# Pytest configuration see https://docs.pytest.org/en/stable/reference/customize.html
+# and https://docs.pytest.org/en/stable/reference/reference.html#ini-options-ref
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-rA -v"
+testpaths = ["tests"]
+pythonpath = ["src"]
+filterwarnings = ["ignore::DeprecationWarning"]
