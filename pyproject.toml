@@ -1,0 +1,13 @@
+# Basic project information
+[project]
+name = "name-of-your-app"
+version = "2025.0.1"
+
+# Most students will use setuptools, though poetry is also an option
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+# Setuptools configuration see https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html#setuptools-specific-configuration
+# You may need to add something here if your app package is NOT in a `src` folder or you have multiple packages at the root level of the project
+
